@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -67,7 +67,7 @@ const ClientImpressumPage = () => {
 
           <Section>
             <h2 className="text-2xl font-semibold bg-gradient-to-r from-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text mb-4">
-              Angaben gemäß § 5 TMG
+              Angaben gemäss § 5 TMG
             </h2>
             <div className="text-gray-600 dark:text-gray-300">
               <p>WebDevian GmbH</p>

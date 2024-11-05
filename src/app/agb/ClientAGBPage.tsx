@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useSpring } from "framer-motion";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header from "@/components/Header";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 

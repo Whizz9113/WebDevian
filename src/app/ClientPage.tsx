@@ -201,7 +201,7 @@ const Page = () => {
                 </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Ihre Vision. Unsere Expertise. Gemeinsam erschaffen wir außergewöhnliche digitale Lösungen.
+                Ihre Vision. Unsere Expertise. Gemeinsam erschaffen wir aussergewöhnliche digitale Lösungen.
               </p>
             </motion.div>
             
@@ -270,7 +270,7 @@ const Page = () => {
                     transition={{ delay: 0.3 }}
                     viewport={{ once: true }}
                   >
-                    Maßgeschneiderte Lösungen für Ihren digitalen Erfolg
+                    Massgeschneiderte Lösungen für Ihren digitalen Erfolg
                   </motion.p>
                 </div>
               </div>
@@ -289,7 +289,7 @@ const Page = () => {
                 {[
                   {
                     title: "WebClassic",
-                    description: "WebDevian bietet maßgeschneiderte Lösungen für Ihren digitalen Auftritt. Von der Erstellung funktionaler Webseiten und Redesigns bis hin zu SEO und gezielten Ads – wir sorgen für Ihre optimale Sichtbarkeit. Unsere Experten gewährleisten reibungslose Performance und überzeugende Designs auf allen Geräten. Vertrauen Sie auf WebDevian, um Ihre Online-Präsenz nachhaltig zu stärken und auf das nächste Level zu bringen.",
+                    description: "WebDevian bietet massgeschneiderte Lösungen für Ihren digitalen Auftritt. Von der Erstellung funktionaler Webseiten und Redesigns bis hin zu SEO und gezielten Ads – wir sorgen für Ihre optimale Sichtbarkeit. Unsere Experten gewährleisten reibungslose Performance und überzeugende Designs auf allen Geräten. Vertrauen Sie auf WebDevian, um Ihre Online-Präsenz nachhaltig zu stärken und auf das nächste Level zu bringen.",
                     icon: (
                       <svg className="h-12 w-12 text-[#87CEEB] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -876,7 +876,7 @@ const Page = () => {
                 },
                 {
                   question: "Mit welchem CMS arbeitet ihr?",
-                  answer: "Wir haben kein Standardmäßiges CMS, Wir erstellen alle unsere Arbeiten von Grund auf mit Next, React und TypeScript. Falls ein Backend Bereich benötig wird, verwenden wir das Payload CMS. Im Bereich eCommerce verwenden wir Shopify, was perfekt mit Next JS und TypeScript Harmonisiert. Bei der Erstellung unserer Websites legen wir großen Wert auf Individualität!"
+                  answer: "Wir haben kein Standardmässiges CMS, Wir erstellen alle unsere Arbeiten von Grund auf mit Next, React und TypeScript. Falls ein Backend Bereich benötig wird, verwenden wir das Payload CMS. Im Bereich eCommerce verwenden wir Shopify, was perfekt mit Next JS und TypeScript harmonisiert. Bei der Erstellung unserer Websites legen wir großen Wert auf Individualität!"
                 },
                 {
                   question: "Was kostet eine Website bei Uns?",

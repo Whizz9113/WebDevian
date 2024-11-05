@@ -1,65 +1,71 @@
 "use client";
 
+import { motion, useScroll, useSpring } from "framer-motion";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
-export default function Header() {
-  const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
-    e.preventDefault();
-    document.querySelector(id)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+const Header = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+  
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/";
+
+  const navItems = isHomePage ? [
+    { href: "#hero", label: "Home" },
+    { href: "#leistungen", label: "Leistungen" },
+    { href: "#kontakt", label: "Kontakt" },
+    { href: "#faq", label: "FAQ" },
+  ] : [
+    { href: "/", label: "Home" },
+  ];
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isHomePage && href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <motion.header 
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm z-50 dark:bg-[#171717]/80"
-    >
-      <div className="container mx-auto px-4 py-4">
-        <nav className="flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold bg-gradient-to-r from-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text">
-            WebDevian
-          </Link>
-          
-          <div className="space-x-6">
-            <Link 
-              href="/" 
-              className="hover:text-[#87CEEB] transition-colors duration-200"
-            >
-              Home
+    <>
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#87CEEB] to-[#FF7F50] origin-left z-50"
+        style={{ scaleX }}
+      />
+      
+      <header className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-[#0D1717]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center">
+              <span className="text-xl font-bold bg-gradient-to-r from-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text">
+                WebDevian
+              </span>
             </Link>
-            <Link 
-              href="#tools" 
-              onClick={(e) => smoothScroll(e, '#tools')}
-              className="hover:text-[#87CEEB] transition-colors duration-200"
-            >
-              Tools
-            </Link>
-            <Link 
-              href="#faq" 
-              onClick={(e) => smoothScroll(e, '#faq')}
-              className="hover:text-[#87CEEB] transition-colors duration-200"
-            >
-              FAQ
-            </Link>
-            <Link 
-              href="/impressum" 
-              className="hover:text-[#87CEEB] transition-colors duration-200"
-            >
-              Impressum
-            </Link>
-            <Link 
-              href="/datenschutz" 
-              className="hover:text-[#87CEEB] transition-colors duration-200"
-            >
-              Datenschutz
-            </Link>
+
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href)}
+                  className="text-gray-600 hover:text-[#87CEEB] dark:text-gray-300 dark:hover:text-[#87CEEB] transition-colors duration-200"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </nav>
-      </div>
-    </motion.header>
+      </header>
+    </>
   );
-} 
+};
+
+export default Header; 
