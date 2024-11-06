@@ -88,8 +88,8 @@ export default function Header() {
           isScrolled ? 'py-2' : 'py-4'
         }`}>
           <nav className="flex items-center justify-between relative">
-            {/* Desktop Navigation - Left Side */}
-            <div className="hidden lg:flex items-center space-x-8 flex-1">
+            {/* Desktop Navigation - All Links Left Side */}
+            <div className="hidden lg:flex items-center space-x-8">
               <Link 
                 href="#leistungen" 
                 onClick={smoothScroll}
@@ -112,10 +112,32 @@ export default function Header() {
               >
                 Beratung
               </Link>
+              <Link 
+                href="#tools" 
+                onClick={smoothScroll}
+                className={`transition-colors ${
+                  isScrolled 
+                    ? 'text-gray-300 hover:text-[#87CEEB]' 
+                    : 'text-gray-700 dark:text-gray-200 hover:text-[#87CEEB]'
+                }`}
+              >
+                Tools
+              </Link>
+              <Link 
+                href="#faq" 
+                onClick={smoothScroll}
+                className={`transition-colors ${
+                  isScrolled 
+                    ? 'text-gray-300 hover:text-[#87CEEB]' 
+                    : 'text-gray-700 dark:text-gray-200 hover:text-[#87CEEB]'
+                }`}
+              >
+                FAQ
+              </Link>
             </div>
             
             {/* Logo - Center */}
-            <div className="flex justify-center items-center flex-1">
+            <div className="flex-1 flex justify-center">
               <Link href="/" className="relative flex justify-center items-center">
                 <AnimatePresence mode="wait">
                   {!isScrolled ? (
@@ -153,30 +175,8 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Desktop Navigation - Right Side */}
-            <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
-              <Link 
-                href="#tools" 
-                onClick={smoothScroll}
-                className={`transition-colors ${
-                  isScrolled 
-                    ? 'text-gray-300 hover:text-[#87CEEB]' 
-                    : 'text-gray-700 dark:text-gray-200 hover:text-[#87CEEB]'
-                }`}
-              >
-                Tools
-              </Link>
-              <Link 
-                href="#faq" 
-                onClick={smoothScroll}
-                className={`transition-colors ${
-                  isScrolled 
-                    ? 'text-gray-300 hover:text-[#87CEEB]' 
-                    : 'text-gray-700 dark:text-gray-200 hover:text-[#87CEEB]'
-                }`}
-              >
-                FAQ
-              </Link>
+            {/* Theme Toggle - Right Side */}
+            <div className="hidden lg:flex items-center justify-end">
               <Button
                 variant="ghost"
                 size="icon"
