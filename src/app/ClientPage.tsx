@@ -205,6 +205,7 @@ const Page = () => {
               </p>
             </motion.div>
             
+            {/* Hero Section Buttons */}
             <motion.div 
               className="flex gap-4 mt-8 relative z-10"
               initial={{ opacity: 0, y: 20 }}
@@ -214,14 +215,14 @@ const Page = () => {
               <Link 
                 href="#kontakt"
                 onClick={smoothScroll}
-                className="px-6 py-3 bg-[#87CEEB] hover:bg-[#87CEEB]/90 text-white rounded-lg transition-colors duration-200"
+                className="px-6 py-3 md:px-6 md:py-3 px-4 py-2 text-sm md:text-base bg-[#87CEEB] hover:bg-[#87CEEB]/90 text-white rounded-lg transition-colors duration-200"
               >
                 Projekt starten →
               </Link>
               <Link 
                 href="#leistungen"
                 onClick={smoothScroll}
-                className="px-6 py-3 border border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB]/10 rounded-lg transition-colors duration-200"
+                className="px-6 py-3 md:px-6 md:py-3 px-4 py-2 text-sm md:text-base border border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB]/10 rounded-lg transition-colors duration-200"
               >
                 Leistungen ansehen
               </Link>
@@ -276,10 +277,10 @@ const Page = () => {
               </div>
 
               <motion.div 
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-8"
+                className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-8"
                 style={{ 
                   gridTemplateRows: "auto auto auto",
-                  gridAutoRows: "195px"
+                  gridAutoRows: "auto"
                 }}
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -306,7 +307,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                       </svg>
                     ),
-                    className: "col-span-2 row-span-1"
+                    className: "col-span-1 sm:col-span-1"
                   },
                   {
                     title: "WebIndividual",
@@ -317,7 +318,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0" />
                       </svg>
                     ),
-                    className: "col-span-2 row-span-1"
+                    className: "col-span-1 sm:col-span-1"
                   },
                   {
                     title: "WebIntelligence",
@@ -329,7 +330,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12a3 3 0 0 1 6 0M15 9a3 3 0 0 1-6 0" />
                       </svg>
                     ),
-                    className: "col-span-1 h-[210px]",
+                    className: "col-span-1 sm:col-span-1",
                     comingSoon: true
                   },
                   {
@@ -340,7 +341,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                       </svg>
                     ),
-                    className: "col-span-1 h-[210px]",
+                    className: "col-span-1 sm:col-span-1",
                     comingSoon: true
                   },
                   {
@@ -351,7 +352,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                       </svg>
                     ),
-                    className: "col-span-2 h-[210px]",
+                    className: "col-span-2",
                     comingSoon: true
                   },
                 ].map((service, index) => (
@@ -419,7 +420,7 @@ const Page = () => {
                 {/* Linke Seite */}
                 <motion.div className="space-y-6 sm:space-y-8">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#87CEEB] via-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text">
-                    Jetzt kostenloses Beratungsgespräch vereinbaren.
+                    Jetzt kostenloses Beratungsgesprch vereinbaren.
                   </h2>
                   
                   <div className="space-y-4 text-gray-300">
@@ -565,15 +566,19 @@ const Page = () => {
           {/* Tech Stack Section */}
           <motion.section
             id="tools"
-            className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24"
+            className="relative min-h-screen flex items-center justify-center py-24 bg-[#171717]/95"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={sectionVariants}
+            style={{
+              backgroundImage: `url(/img/noise.png)`,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '100px 100px',
+              backgroundBlendMode: 'soft-light'
+            }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 via-transparent to-[#FF7F50]/15" />
-            
-            <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <motion.div 
                 className="text-center mb-16"
                 initial={{ opacity: 0, y: 20 }}
@@ -589,12 +594,10 @@ const Page = () => {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                {/* Große Hauptkarte - Next.js & React */}
-                <motion.div
-                  className="md:col-span-2 md:row-span-2 p-8 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
+              {/* Grid für Tools mit angepassten Abständen */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4">
+                {/* Next.js & React - große Karte */}
+                <motion.div className="col-span-1 lg:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="h-full flex flex-col justify-between">
                     <div>
                       <div className="flex items-center gap-4 mb-6">
@@ -640,11 +643,8 @@ const Page = () => {
                   </div>
                 </motion.div>
 
-                {/* Frontend-Technologien */}
-                <motion.div
-                  className="md:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
+                {/* Frontend Technologien */}
+                <motion.div className="col-span-1 lg:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Frontend Technologien</h3>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-4">
@@ -685,107 +685,83 @@ const Page = () => {
                   </div>
                 </motion.div>
 
-                {/* Backend & APIs */}
-                <motion.div
-                  className="p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Backend & APIs</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                      </svg>
-                      <span className="text-gray-300">PostgreSQL</span>
+                {/* Container für Backend & Cloud - nur mobil nebeneinander */}
+                <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-4 col-span-1">
+                  {/* Backend & APIs */}
+                  <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
+                    <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Backend & APIs</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                        </svg>
+                        <span className="text-gray-300">PostgreSQL</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span className="text-gray-300">REST APIs</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                        <span className="text-gray-300">Microservices</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span className="text-gray-300">REST APIs</span>
+                  </motion.div>
+
+                  {/* Cloud & Deployment */}
+                  <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
+                    <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Cloud & Deployment</h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                        <span className="text-gray-300">Vercel</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
+                        <span className="text-gray-300">AWS</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                        </svg>
+                        <span className="text-gray-300">Docker</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                      </svg>
-                      <span className="text-gray-300">Microservices</span>
-                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Logo Card */}
+                <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
+                  <div className="absolute inset-0">
+                    <Image
+                      src="/img/tools.jpg"
+                      alt="Development Tools"
+                      fill
+                      className="object-cover opacity-20"
+                      priority
+                    />
+                  </div>
+                  <div className="relative z-10 flex items-center justify-center h-full">
+                    <Image
+                      src="/img/logo.png"
+                      alt="WebDevian Logo"
+                      width={200}
+                      height={200}
+                      className="object-contain"
+                    />
                   </div>
                 </motion.div>
 
-                {/* Development Tools */}
-                <motion.div
-                  className="p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Development Tools</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                      </svg>
-                      <span className="text-gray-300">VS Code</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                      </svg>
-                      <span className="text-gray-300">NPM & PNPM</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                      </svg>
-                      <span className="text-gray-300">ESLint & Prettier</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                      </svg>
-                      <span className="text-gray-300">Husky & Lint-Staged</span>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Cloud & Deployment */}
-                <motion.div
-                  className="p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300"
-                  style={{
-                    backgroundImage: `url(/img/noise.png)`,
-                    backgroundRepeat: 'repeat',
-                    backgroundSize: '100px 100px',
-                    backgroundBlendMode: 'soft-light'
-                  }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Cloud & Deployment</h3>
-                  <div className="grid grid-cols-1 gap-4">
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                      </svg>
-                      <span className="text-gray-300">Vercel</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                      </svg>
-                      <span className="text-gray-300">AWS</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
-                      </svg>
-                      <span className="text-gray-300">Docker</span>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Tools Showcase - Jetzt breiter und unten */}
-                <motion.div
-                  className="md:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300 relative overflow-hidden"
-                  whileHover={{ scale: 1.02 }}
-                >
+                {/* Tools Showcase */}
+                <motion.div className="col-span-1 lg:col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="absolute inset-0">
                     <Image
                       src="/img/tools.jpg"
@@ -815,31 +791,6 @@ const Page = () => {
                     </motion.button>
                   </div>
                 </motion.div>
-
-                {/* Logo Card */}
-                <motion.div
-                  className="md:col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300 relative overflow-hidden"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="absolute inset-0">
-                    <Image
-                      src="/img/tools.jpg"
-                      alt="Development Tools"
-                      fill
-                      className="object-cover opacity-20"
-                      priority
-                    />
-                  </div>
-                  <div className="relative z-10 flex items-center justify-center h-full">
-                    <Image
-                      src="/img/logo.png"
-                      alt="WebDevian Logo"
-                      width={200}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
-                </motion.div>
               </div>
             </div>
           </motion.section>
@@ -850,11 +801,11 @@ const Page = () => {
             initial="hidden"
             animate={activeSection === 3 ? "visible" : "hidden"}
             variants={sectionVariants}
-            className="relative min-h-screen flex flex-col justify-center items-center px-4 bg-[#171717]"
+            className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24 bg-[#171717]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 via-transparent to-[#FF7F50]/15" />
             
-            <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 mb-16">
+            <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 mb-16 py-8 sm:py-12">
               <span className="text-[#FF7F50] font-medium">WIR HABEN DIE ANTWORTEN!</span>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#87CEEB] via-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text pb-2 tracking-normal">
                 Häufig gestellte Fragen
@@ -864,7 +815,7 @@ const Page = () => {
               </p>
             </motion.div>
 
-            <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8">
+            <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
               {[
                 {
                   question: "Ich habe keine Domain und kein Hosting für meine Website?",
