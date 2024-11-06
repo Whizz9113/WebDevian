@@ -88,8 +88,8 @@ export default function Header() {
           isScrolled ? 'py-2' : 'py-4'
         }`}>
           <nav className="flex items-center justify-between relative">
-            {/* Desktop Navigation - All Links Left Side */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Desktop Navigation - Left Side */}
+            <div className="hidden lg:flex items-center space-x-8 flex-1">
               <Link 
                 href="#leistungen" 
                 onClick={smoothScroll}
@@ -137,7 +137,7 @@ export default function Header() {
             </div>
             
             {/* Logo - Center */}
-            <div className="flex-1 flex justify-center">
+            <div className="absolute left-1/2 transform -translate-x-1/2">
               <Link href="/" className="relative flex justify-center items-center">
                 <AnimatePresence mode="wait">
                   {!isScrolled ? (
@@ -176,7 +176,7 @@ export default function Header() {
             </div>
 
             {/* Theme Toggle - Right Side */}
-            <div className="hidden lg:flex items-center justify-end">
+            <div className="hidden lg:flex items-center justify-end flex-1">
               <Button
                 variant="ghost"
                 size="icon"
