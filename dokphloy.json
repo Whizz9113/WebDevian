@@ -1,0 +1,11 @@
+{
+  "projectName": "webdevian-landingpage",
+  "deploymentType": "docker",
+  "buildCommand": "npm run build",
+  "startCommand": "npm start",
+  "port": 3000,
+  "env": {
+    "NODE_ENV": "production",
+    "HOSTNAME": "0.0.0.0"
+  }
+}
