@@ -65,6 +65,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Test ob die Bilder existieren
+    const testImage = new Image();
+    testImage.src = '/img/logo.png';
+    testImage.onload = () => console.log('Logo loaded successfully');
+    testImage.onerror = () => console.error('Error loading logo');
+  }, []);
+
   if (!mounted) return null;
 
   return (
