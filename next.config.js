@@ -6,9 +6,6 @@ const nextConfig = {
   output: 'standalone',
   images: {
     unoptimized: true,
-    domains: ['localhost', 'webdevian.ch', 'www.webdevian.ch'],
-    loader: 'default',
-    path: '',
   },
 }
 
