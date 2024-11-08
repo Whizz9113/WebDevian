@@ -236,13 +236,19 @@ const Page = () => {
             animate={activeSection === 1 ? "visible" : "hidden"}
             variants={sectionVariants}
             className="min-h-screen py-24 px-4 bg-[#171717]/95 relative flex items-center"
-            style={{
-              backgroundImage: `url(/img/noise.png)`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '100px 100px',
-              backgroundBlendMode: 'soft-light'
-            }}
           >
+            <div className="absolute inset-0">
+              <Image
+                src="/img/noise.png"
+                alt="Background Noise"
+                fill
+                className="object-cover opacity-20"
+                priority
+                sizes="100vw"
+                quality={100}
+              />
+            </div>
+            
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <div className="flex flex-col gap-8 lg:gap-12">
                 <div className="relative z-10 space-y-4 w-full">
@@ -408,13 +414,19 @@ const Page = () => {
             animate={activeSection === 2 ? "visible" : "hidden"}
             variants={sectionVariants}
             className="relative min-h-screen flex items-center justify-center px-4 py-24 bg-[#171717]/95"
-            style={{
-              backgroundImage: `url(/img/noise.png)`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '100px 100px',
-              backgroundBlendMode: 'soft-light'
-            }}
           >
+            <div className="absolute inset-0">
+              <Image
+                src="/img/noise.png"
+                alt="Background Noise"
+                fill
+                className="object-cover opacity-20"
+                priority
+                sizes="100vw"
+                quality={100}
+              />
+            </div>
+
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Linke Seite */}
@@ -571,13 +583,19 @@ const Page = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={sectionVariants}
-            style={{
-              backgroundImage: `url(/img/noise.png)`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '100px 100px',
-              backgroundBlendMode: 'soft-light'
-            }}
           >
+            <div className="absolute inset-0">
+              <Image
+                src="/img/noise.png"
+                alt="Background Noise"
+                fill
+                className="object-cover opacity-20"
+                priority
+                sizes="100vw"
+                quality={100}
+              />
+            </div>
+
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <motion.div 
                 className="text-center mb-16"
@@ -685,7 +703,7 @@ const Page = () => {
                   </div>
                 </motion.div>
 
-                {/* Container für Backend & Cloud - nur mobil nebeneinander */}
+                {/* Container f��r Backend & Cloud - nur mobil nebeneinander */}
                 <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-4 col-span-1">
                   {/* Backend & APIs */}
                   <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
@@ -756,6 +774,7 @@ const Page = () => {
                       width={200}
                       height={200}
                       className="object-contain"
+                      priority
                     />
                   </div>
                 </motion.div>
@@ -803,7 +822,17 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24 bg-[#171717]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#87CEEB]/20 via-transparent to-[#FF7F50]/15" />
+            <div className="absolute inset-0">
+              <Image
+                src="/img/noise.png"
+                alt="Background Noise"
+                fill
+                className="object-cover opacity-20"
+                priority
+                sizes="100vw"
+                quality={100}
+              />
+            </div>
             
             <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 mb-16 py-8 sm:py-12">
               <span className="text-[#FF7F50] font-medium">WIR HABEN DIE ANTWORTEN!</span>
