@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -17,13 +18,19 @@ const Footer = () => {
             className="flex justify-center items-center"
           >
             <Link href="/" className="block">
-              <motion.img
-                src="/img/logo.png"
-                alt="WebDevian Logo"
-                className="h-36 w-auto"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
-              />
+              >
+                <Image
+                  src="/img/logo.png"
+                  alt="WebDevian Logo"
+                  width={144}
+                  height={144}
+                  className="w-auto"
+                  priority
+                />
+              </motion.div>
             </Link>
           </motion.div>
 
