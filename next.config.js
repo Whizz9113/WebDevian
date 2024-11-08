@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  transpilePackages: ['framer-motion'],
   output: 'standalone',
   images: {
-    unoptimized: true
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'webdevian.ch',
+      },
+    ],
+    domains: ['localhost'],
   },
-  experimental: {
-    outputStandalone: true
-  }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig 
