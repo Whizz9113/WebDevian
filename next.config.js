@@ -5,14 +5,8 @@ const nextConfig = {
   transpilePackages: ['framer-motion'],
   output: 'standalone',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'webdevian.ch',
-      },
-    ],
-    domains: ['localhost'],
+    unoptimized: true,
   },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
