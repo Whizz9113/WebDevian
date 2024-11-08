@@ -6,6 +6,14 @@ const nextConfig = {
   output: 'standalone',
   images: {
     domains: ['www.webdevian.ch'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.webdevian.ch',
+        port: '',
+        pathname: '/img/**',
+      },
+    ],
   },
 }
 
