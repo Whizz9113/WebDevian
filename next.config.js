@@ -5,7 +5,7 @@ const nextConfig = {
   transpilePackages: ['framer-motion'],
   output: 'standalone',
   images: {
-    unoptimized: true,
+    domains: ['www.webdevian.ch'],
   },
 }
 
