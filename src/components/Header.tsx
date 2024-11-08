@@ -78,7 +78,7 @@ export default function Header() {
             : 'bg-transparent'
         }`}
         style={isScrolled ? {
-          backgroundImage: `url(../../public/img/noise.png)`,
+          backgroundImage: `url(../public/img/noise.png)`,
           backgroundRepeat: 'repeat',
           backgroundSize: '100px 100px',
           backgroundBlendMode: 'soft-light'
