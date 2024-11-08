@@ -78,7 +78,7 @@ export default function Header() {
             : 'bg-transparent'
         }`}
         style={isScrolled ? {
-          backgroundImage: `url(../../public/img/noise.png)`,
+          backgroundImage: `url(/img/noise.png)`,
           backgroundRepeat: 'repeat',
           backgroundSize: '100px 100px',
           backgroundBlendMode: 'soft-light'
@@ -149,7 +149,7 @@ export default function Header() {
                       className="relative w-20 h-20 flex justify-center items-center"
                     >
                       <Image
-                        src="https://s20.directupload.net/images/241108/phtbq265.png"
+                        src="/img/logo.png"
                         alt="WebDevian Logo"
                         width={80}
                         height={80}
