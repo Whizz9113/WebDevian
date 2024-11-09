@@ -562,7 +562,7 @@ const Page = () => {
           {/* Tech Stack Section */}
           <motion.section
             id="tools"
-            className="relative min-h-screen flex items-center justify-center py-24 bg-[#171717]/95"
+            className="relative min-h-screen flex items-center justify-center px-4 py-24 bg-[#171717]/95"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -586,7 +586,7 @@ const Page = () => {
               </motion.div>
 
               {/* Grid für Tools mit angepassten Abständen */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 {/* Next.js & React - große Karte */}
                 <motion.div className="col-span-1 lg:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="h-full flex flex-col justify-between">
