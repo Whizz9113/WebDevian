@@ -239,7 +239,7 @@ const Page = () => {
           >
             <div className="absolute inset-0">
               <Image
-                src="/img/noise.png"
+                src="/noise.png"
                 alt="Background Noise"
                 fill
                 className="object-cover opacity-20"
@@ -417,7 +417,7 @@ const Page = () => {
           >
             <div className="absolute inset-0">
               <Image
-                src="/img/noise.png"
+                src="/noise.png"
                 alt="Background Noise"
                 fill
                 className="object-cover opacity-20"
@@ -586,7 +586,7 @@ const Page = () => {
           >
             <div className="absolute inset-0">
               <Image
-                src="/img/noise.png"
+                src="/noise.png"
                 alt="Background Noise"
                 fill
                 className="object-cover opacity-20"
@@ -760,7 +760,7 @@ const Page = () => {
                 <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="absolute inset-0">
                     <Image
-                      src="/img/tools.jpg"
+                      src="/tools.jpg"
                       alt="Development Tools"
                       fill
                       className="object-cover opacity-20"
@@ -769,7 +769,7 @@ const Page = () => {
                   </div>
                   <div className="relative z-10 flex items-center justify-center h-full">
                     <Image
-                      src="/img/logo.png"
+                      src="/logo.png"
                       alt="WebDevian Logo"
                       width={200}
                       height={200}
@@ -783,7 +783,7 @@ const Page = () => {
                 <motion.div className="col-span-1 lg:col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="absolute inset-0">
                     <Image
-                      src="/img/tools.jpg"
+                      src="/tools.jpg"
                       alt="Development Tools"
                       fill
                       className="object-cover opacity-20"
@@ -824,7 +824,7 @@ const Page = () => {
           >
             <div className="absolute inset-0">
               <Image
-                src="/img/noise.png"
+                src="/noise.png"
                 alt="Background Noise"
                 fill
                 className="object-cover opacity-20"
