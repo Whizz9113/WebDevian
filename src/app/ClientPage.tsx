@@ -237,17 +237,6 @@ const Page = () => {
             variants={sectionVariants}
             className="min-h-screen py-24 px-4 bg-[#171717]/95 relative flex items-center"
           >
-            <div className="absolute inset-0 bg-repeat opacity-20">
-              <Image
-                src="/noise.png"
-                alt="Background Noise"
-                fill
-                className="object-cover opacity-20"
-                priority
-                sizes="100vw"
-                quality={100}
-              />
-            </div>
             
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <div className="flex flex-col gap-8 lg:gap-12">
