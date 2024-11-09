@@ -676,8 +676,8 @@ const Page = () => {
                   </div>
                 </motion.div>
 
-                {/* Container fr Backend & Cloud - nur mobil nebeneinander */}
-                <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-4 col-span-1">
+                {/* Container für Backend & Cloud */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-4 col-span-1">
                   {/* Backend & APIs */}
                   <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                     <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-4">Backend & APIs</h3>
