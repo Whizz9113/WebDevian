@@ -303,7 +303,7 @@ const Page = () => {
                       </svg>
                     ),
                     className: "col-span-2 row-span-2",
-                    image: "/img/webclassic-bg.jpg"
+                    image: "/webclassic-bg.jpg"
                   },
                   {
                     title: "WebCommerce",
