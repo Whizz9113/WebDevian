@@ -237,7 +237,7 @@ const Page = () => {
             variants={sectionVariants}
             className="min-h-screen py-24 px-4 bg-[#171717]/95 relative flex items-center"
           >
-            <div className="relative w-full h-screen">
+            <div className="absolute inset-0">
               <Image
                 src="/noise.png"
                 alt="Background Noise"
@@ -415,7 +415,7 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex items-center justify-center px-4 py-24 bg-[#171717]/95"
           >
-            <div className="relative w-full h-screen">
+            <div className="absolute inset-0">
               <Image
                 src="/noise.png"
                 alt="Background Noise"
@@ -584,7 +584,7 @@ const Page = () => {
             viewport={{ once: true }}
             variants={sectionVariants}
           >
-            <div className="relative w-full h-screen">
+            <div className="absolute inset-0">
               <Image
                 src="/noise.png"
                 alt="Background Noise"
@@ -822,7 +822,7 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24 bg-[#171717]"
           >
-            <div className="relative w-full h-screen">
+            <div className="absolute inset-0">
               <Image
                 src="/noise.png"
                 alt="Background Noise"
