@@ -23,7 +23,7 @@ const Footer = () => {
                 transition={{ duration: 0.2 }}
               >
                 <Image
-                  src="/img/logo.png"
+                  src="/logo.png"
                   alt="WebDevian Logo"
                   width={144}
                   height={144}
