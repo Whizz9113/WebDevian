@@ -237,7 +237,7 @@ const Page = () => {
             variants={sectionVariants}
             className="min-h-screen py-24 px-4 bg-[#171717]/95 relative flex items-center"
           >
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[url('/noise.png')] bg-repeat opacity-20" />
               <Image
                 src="/noise.png"
                 alt="Background Noise"
