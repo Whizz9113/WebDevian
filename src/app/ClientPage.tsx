@@ -420,7 +420,7 @@ const Page = () => {
                 src="/noise.png"
                 alt="Background Noise"
                 fill
-                className="object-cover opacity-20"
+                className="object-none opacity-20"
                 priority
                 sizes="100vw"
                 quality={100}
@@ -589,7 +589,7 @@ const Page = () => {
                 src="/noise.png"
                 alt="Background Noise"
                 fill
-                className="object-cover opacity-20"
+                className="object-none opacity-20"
                 priority
                 sizes="100vw"
                 quality={100}
