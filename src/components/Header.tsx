@@ -149,7 +149,7 @@ export default function Header() {
                       className="relative w-20 h-20 flex justify-center items-center"
                     >
                     <Image
-                      src="/img/logo.png"
+                      src="/logo.png"
                       alt="WebDevian Logo"
                       width={80}
                       height={80}
