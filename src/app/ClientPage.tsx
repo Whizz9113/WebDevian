@@ -353,7 +353,7 @@ const Page = () => {
                 ].map((service, index) => (
                   <motion.div
                     key={index}
-                    className={`${service.className} p-6 rounded-xl bg-[#1d1d1d] backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
+                    className={`${service.className} p-4 sm:p-6 rounded-xl bg-[#1d1d1d] backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
                     whileHover={{ scale: 1.02 }}
                   >
                     {service.comingSoon && (
@@ -381,7 +381,7 @@ const Page = () => {
                         </div>
                       )}
                       {service.title !== "WebClassic" && (
-                        <div className="text-[#87CEEB] relative z-10">
+                        <div className="text-[#87CEEB] relative z-10 mb-2">
                           {service.icon}
                         </div>
                       )}
