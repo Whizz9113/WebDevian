@@ -683,20 +683,55 @@ const Page = () => {
                     <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-4">Backend & APIs</h3>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
-                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                        <svg 
+                          className="w-6 h-6 text-[#87CEEB]" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                        >
+                          <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
                         </svg>
                         <span className="text-gray-300">PostgreSQL</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        <svg 
+                          className="w-6 h-6 text-[#87CEEB]" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                        >
+                          <rect x="3" y="3" width="18" height="18" rx="2"/>
+                          <path d="M8 10h.01"/>
+                          <path d="M12 10h.01"/>
+                          <path d="M16 10h.01"/>
+                          <path d="M8 14h.01"/>
+                          <path d="M12 14h.01"/>
+                          <path d="M16 14h.01"/>
                         </svg>
                         <span className="text-gray-300">REST APIs</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        <svg 
+                          className="w-6 h-6 text-[#87CEEB]" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                        >
+                          <rect x="3" y="3" width="7" height="7"/>
+                          <rect x="14" y="3" width="7" height="7"/>
+                          <rect x="14" y="14" width="7" height="7"/>
+                          <rect x="3" y="14" width="7" height="7"/>
                         </svg>
                         <span className="text-gray-300">Microservices</span>
                       </div>
