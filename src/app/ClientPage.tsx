@@ -193,7 +193,7 @@ const Page = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="space-y-4 relative z-10 max-w-4xl mx-auto pt-20 px-4 sm:px-6"
+              className="space-y-4 relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-20 md:pt-20 lg:pt-20"
             >
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold">
                 <span className="bg-gradient-to-r from-[#87CEEB] via-[#87CEEB] to-[#FF7F50] text-transparent bg-clip-text">
@@ -292,7 +292,7 @@ const Page = () => {
                       </svg>
                     ),
                     className: "col-span-2 row-span-2",
-                    image: "/webclassic-bg.jpg"
+                    image: "/img/webclassic-bg.jpg"
                   },
                   {
                     title: "WebCommerce",
@@ -302,7 +302,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                       </svg>
                     ),
-                    className: "col-span-1 sm:col-span-1"
+                    className: "col-span-1 sm:col-span-1",
                   },
                   {
                     title: "WebIndividual",
@@ -313,7 +313,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0" />
                       </svg>
                     ),
-                    className: "col-span-1 sm:col-span-1"
+                    className: "col-span-1 sm:col-span-1",
                   },
                   {
                     title: "WebIntelligence",
@@ -325,7 +325,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12a3 3 0 0 1 6 0M15 9a3 3 0 0 1-6 0" />
                       </svg>
                     ),
-                    className: "col-span-1 sm:col-span-1",
+                    className: "col-span-1",
                     comingSoon: true
                   },
                   {
@@ -336,7 +336,7 @@ const Page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                       </svg>
                     ),
-                    className: "col-span-1 sm:col-span-1",
+                    className: "col-span-1",
                     comingSoon: true
                   },
                   {
@@ -386,7 +386,7 @@ const Page = () => {
                         </div>
                       )}
                       <div>
-                        <h3 className="text-xl font-semibold text-[#87CEEB] mb-2">{service.title}</h3>
+                        <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-2">{service.title}</h3>
                         <p className="text-gray-300 text-sm">{service.description}</p>
                       </div>
                     </div>
@@ -630,7 +630,7 @@ const Page = () => {
 
                 {/* Frontend Technologien */}
                 <motion.div className="col-span-1 lg:col-span-2 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
-                  <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Frontend Technologien</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-4">Frontend Technologien</h3>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
@@ -670,11 +670,11 @@ const Page = () => {
                   </div>
                 </motion.div>
 
-                {/* Container f��r Backend & Cloud - nur mobil nebeneinander */}
+                {/* Container fr Backend & Cloud - nur mobil nebeneinander */}
                 <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-4 col-span-1">
                   {/* Backend & APIs */}
                   <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
-                    <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Backend & APIs</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-4">Backend & APIs</h3>
                     <div className="space-y-3">
                       <div className="flex items-center gap-3">
                         <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -699,7 +699,7 @@ const Page = () => {
 
                   {/* Cloud & Deployment */}
                   <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
-                    <h3 className="text-xl font-bold text-[#87CEEB] mb-4">Cloud & Deployment</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-4">Cloud & Deployment</h3>
                     <div className="grid grid-cols-1 gap-4">
                       <div className="flex items-center gap-3">
                         <svg className="w-6 h-6 text-[#87CEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -727,7 +727,7 @@ const Page = () => {
                 <motion.div className="col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
                   <div className="absolute inset-0">
                     <Image
-                      src="/tools.jpg"
+                      src="/img/tools.jpg"
                       alt="Development Tools"
                       fill
                       className="object-cover opacity-20"
@@ -736,7 +736,7 @@ const Page = () => {
                   </div>
                   <div className="relative z-10 flex items-center justify-center h-full">
                     <Image
-                      src="/logo.png"
+                      src="/img/logo.png"
                       alt="WebDevian Logo"
                       width={200}
                       height={200}
@@ -748,15 +748,6 @@ const Page = () => {
 
                 {/* Tools Showcase */}
                 <motion.div className="col-span-1 lg:col-span-1 p-6 rounded-xl bg-[#171717]/95 backdrop-blur-md border border-[#87CEEB]/20 hover:border-[#87CEEB]/60 transition-all duration-300" whileHover={{ scale: 1.02 }}>
-                  <div className="absolute inset-0">
-                    <Image
-                      src="/tools.jpg"
-                      alt="Development Tools"
-                      fill
-                      className="object-cover opacity-20"
-                      priority
-                    />
-                  </div>
                   <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-6">
                     <h3 className="text-2xl font-bold text-[#87CEEB] text-center">
                       Haben wir Ihr Interesse geweckt?
@@ -789,6 +780,7 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24 bg-[#171717]"
           >
+
             
             <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 mb-16 py-8 sm:py-12">
               <span className="text-[#FF7F50] font-medium">WIR HABEN DIE ANTWORTEN!</span>
