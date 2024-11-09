@@ -404,17 +404,6 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex items-center justify-center px-4 py-24 bg-[#171717]/95"
           >
-            <div className="absolute inset-0">
-              <Image
-                src="/noise.png"
-                alt="Background Noise"
-                fill
-                className="object-none opacity-20"
-                priority
-                sizes="100vw"
-                quality={100}
-              />
-            </div>
 
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -573,17 +562,6 @@ const Page = () => {
             viewport={{ once: true }}
             variants={sectionVariants}
           >
-            <div className="absolute inset-0">
-              <Image
-                src="/noise.png"
-                alt="Background Noise"
-                fill
-                className="object-none opacity-20"
-                priority
-                sizes="100vw"
-                quality={100}
-              />
-            </div>
 
             <div className="container mx-auto max-w-6xl px-4 sm:px-6">
               <motion.div 
@@ -811,17 +789,6 @@ const Page = () => {
             variants={sectionVariants}
             className="relative min-h-screen flex flex-col justify-center items-center px-4 py-24 bg-[#171717]"
           >
-            <div className="absolute inset-0">
-              <Image
-                src="/noise.png"
-                alt="Background Noise"
-                fill
-                className="object-none opacity-20"
-                priority
-                sizes="100vw"
-                quality={100}
-              />
-            </div>
             
             <motion.div className="w-full max-w-5xl mx-auto space-y-4 relative z-10 px-4 sm:px-6 lg:px-8 mb-16 py-8 sm:py-12">
               <span className="text-[#FF7F50] font-medium">WIR HABEN DIE ANTWORTEN!</span>
