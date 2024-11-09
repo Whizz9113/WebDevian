@@ -148,14 +148,15 @@ export default function Header() {
                       exit={{ opacity: 0 }}
                       className="relative w-20 h-20 flex justify-center items-center"
                     >
-                      <Image
-                        src="/img/logo.png"
-                        alt="WebDevian Logo"
-                        width={80}
-                        height={80}
-                        className="object-contain scale-125"
-                        priority
-                      />
+                    <Image
+                      src="/img/logo.png"
+                      alt="WebDevian Logo"
+                      width={80}
+                      height={80}
+                      className="object-contain scale-125"
+                      priority
+                      unoptimized
+                    />
                     </motion.div>
                   ) : (
                     <motion.div
