@@ -386,7 +386,13 @@ const Page = () => {
                         </div>
                       )}
                       <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-[#87CEEB] mb-2">{service.title}</h3>
+                        <h3 className={`${
+                          service.title === "WebClassic" 
+                            ? "text-lg md:text-xl" 
+                            : "text-base md:text-lg lg:text-xl"
+                        } font-semibold text-[#87CEEB] mb-2`}>
+                          {service.title}
+                        </h3>
                         <p className="text-gray-300 text-sm">{service.description}</p>
                       </div>
                     </div>
